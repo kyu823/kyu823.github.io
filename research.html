@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Kyusik Kim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="research">
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Kyusik Kim</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="research.html">Research</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <button class="nav-mobile-btn" id="navMobileBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="research.html">Research</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <p class="section-label">/ RESEARCH</p>
+      <h1 class="page-title">Research Trajectory</h1>
+      <p class="page-subtitle">How do we build AI that truly understands and serves people?</p>
+    </div>
+  </section>
+
+  <!-- Interactive Storyline Visualization -->
+  <section class="section storyline-viz-section">
+    <div class="container">
+      <div id="storyline-viz" class="storyline-viz"></div>
+    </div>
+  </section>
+
+  <!-- Storyline Text -->
+  <section class="section storyline">
+    <div class="container">
+      <div class="storyline-flow">
+        <div class="storyline-step" data-theme="interaction">
+          <div class="step-marker" style="background:#3ecf8e">1</div>
+          <div class="step-content">
+            <h3>Human-AI Interaction</h3>
+            <p>It started with designing AI agents that genuinely enhance human experiences&mdash;sports co-viewing, film appreciation, shopping companions.</p>
+          </div>
+        </div>
+        <div class="storyline-arrow">&darr;</div>
+        <div class="storyline-step" data-theme="alignment">
+          <div class="step-marker" style="background:#6c63ff">2</div>
+          <div class="step-content">
+            <h3>Value Alignment</h3>
+            <p>To make these agents truly useful, I realized they need to embody the right values. What should AI prioritize? How do we prevent sycophancy and ensure genuine deliberation?</p>
+          </div>
+        </div>
+        <div class="storyline-arrow">&darr;</div>
+        <div class="storyline-step" data-theme="fairness">
+          <div class="step-marker" style="background:#ef6461">3</div>
+          <div class="step-content">
+            <h3>Fairness &amp; Bias</h3>
+            <p>And what problems must we avoid? I found that multimodal AI systems harbor subtle biases&mdash;in hiring, in evaluation, across cultures. Avoiding these is essential for human-centered design.</p>
+          </div>
+        </div>
+        <div class="storyline-arrow">&darr;</div>
+        <div class="storyline-step" data-theme="simulation">
+          <div class="step-marker" style="background:#f0a050">4</div>
+          <div class="step-content">
+            <h3>Simulation</h3>
+            <p>Can we simulate human-like agents at scale to test alignment and bias? And when simulation meets HAI, can we build AI systems that truly understand people?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Theme 1: Human-AI Interaction -->
+  <section class="section theme-detail" id="theme-interaction">
+    <div class="container">
+      <div class="theme-header" style="border-color: #3ecf8e">
+        <h2>Human-AI Interaction</h2>
+        <span class="theme-badge" style="background: #3ecf8e">7 papers</span>
+      </div>
+      <p class="theme-description">How can AI agents become meaningful partners in everyday experiences? My work designs and evaluates AI companions for sports co-viewing, film appreciation, shopping, and conversational search&mdash;exploring what makes human-AI collaboration feel natural, engaging, and socially enriching.</p>
+
+      <div class="theme-papers">
+        <div class="theme-paper-item"><img src="images/chi26-1637.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge chi">CHI 2026</div><h4>"What Keeps Fans on the Silent Field?"</h4><p>AI sports broadcasting prototype (ARUA) that lets users direct their own AI commentary, tailoring social presence and emotional tone.</p></div></div>
+        <div class="theme-paper-item"><img src="images/552_Who_Is_Shopping_With_You_H.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge sigir">SIGIR 2026</div><h4>Who Is Shopping With You?</h4><p>How persona design shapes cognitive and social engagement when AI agents accompany users during shopping.</p></div></div>
+        <div class="theme-paper-item"><img src="images/CHI25_Bleacherbot.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge chi">CHI 2025</div><h4>BleacherBot: AI Sports Co-Viewing Partner</h4><p>Fine-tuned LLM-based AI agent that enhances emotional engagement during baseball co-viewing through context-aware commentary.</p></div></div>
+        <div class="theme-paper-item"><img src="images/CHI25_CML.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge chi">CHI 2025</div><h4>Cinema Multiverse Lounge</h4><p>Multi-agent system where users converse with AI personas of directors, actors, and audiences for richer film appreciation.</p></div></div>
+        <div class="theme-paper-item"><img src="images/ACL25_dice.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge acl-f">Findings of ACL 2025</div><h4>DICE-BENCH</h4><p>Evaluating LLM tool-use capabilities in complex multi-round, multi-party dialogue scenarios.</p></div></div>
+        <div class="theme-paper-item"><img src="images/CHI24_Ikea.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge chi-ea">CHI EA 2024</div><h4>Chatbot Customization &amp; Failure</h4><p>How user-participated customization affects tolerance and recovery from chatbot failures.</p></div></div>
+        <div class="theme-paper-item"><img src="images/SIGIR24_SRE.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge sigir">SIGIR 2024</div><h4>Self-Referential Review</h4><p>Exploring how self-reference effects influence review behavior and evaluation quality.</p></div></div>
+      </div>
+
+      <div class="theme-connector"><span>Designing these agents raised a deeper question: <strong>how should AI agents behave?</strong> This led to my work on Value Alignment.</span></div>
+    </div>
+  </section>
+
+  <!-- Theme 2: Value Alignment -->
+  <section class="section theme-detail" id="theme-alignment">
+    <div class="container">
+      <div class="theme-header" style="border-color: #6c63ff">
+        <h2>Value Alignment</h2>
+        <span class="theme-badge" style="background: #6c63ff">3 papers</span>
+      </div>
+      <p class="theme-description">To make AI truly serve people, it must reflect human values&mdash;not merely confirm biases. I study sycophancy in AI deliberation, selective exposure in argument search, and decision-making under pressure to understand how AI can support genuine reasoning rather than comfortable agreement.</p>
+
+      <div class="theme-papers">
+        <div class="theme-paper-item"><img src="images/6819_Feeling_Right_vs_Being_Ri.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge acl">ACL 2026</div><h4>Feeling Right vs. Being Right</h4><p>How AI sycophancy undermines value-laden deliberation&mdash;when AI agrees too readily, it erodes genuine moral reasoning.</p></div></div>
+        <div class="theme-paper-item"><img src="images/SIGIR25.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge sigir">SIGIR 2025</div><h4>Conversational Argument Search</h4><p>Strategies to counteract selective exposure in argument search, enabling balanced access to diverse viewpoints.</p></div></div>
+        <div class="theme-paper-item"><img src="images/EMNLP24.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge emnlp-f">Findings of EMNLP 2024</div><h4>Will LLMs Sink or Swim?</h4><p>Exploring how LLMs make decisions under pressure, revealing systematic biases in high-stakes scenarios.</p></div></div>
+      </div>
+
+      <div class="theme-connector"><span>Values alone aren't enough&mdash;we also need to identify <strong>what can go wrong</strong>. This led to my investigation of biases in AI systems.</span></div>
+    </div>
+  </section>
+
+  <!-- Theme 3: Fairness & Bias -->
+  <section class="section theme-detail" id="theme-fairness">
+    <div class="container">
+      <div class="theme-header" style="border-color: #ef6461">
+        <h2>Fairness &amp; Bias</h2>
+        <span class="theme-badge" style="background: #ef6461">5 papers</span>
+      </div>
+      <p class="theme-description">AI systems inherit and amplify human biases in subtle, often cross-modal ways. I investigate halo effects in AI hiring, visual interference in speech evaluation, gender matching biases, and acoustic grounding failures in medical triage&mdash;uncovering where bias operates so we can build fairer systems.</p>
+
+      <div class="theme-papers">
+        <div class="theme-paper-item"><img src="images/10295_Visual_Interference_in_S.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge acl-f">Findings of ACL 2026</div><h4>Hearing with Eyes</h4><p>MLLMs exhibit "Hearing with Eyes"&mdash;visual cues about a speaker's race interfere with speech evaluation, with culturally asymmetric patterns between Korean and English contexts.</p></div></div>
+        <div class="theme-paper-item"><img src="images/10529_Whose_Voice_Whose_Avatar.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge acl-f">Findings of ACL 2026</div><h4>Voice-Avatar Gender Conflict</h4><p>In cooperative gaming, when an AI teammate's voice gender doesn't match its avatar appearance, MLLMs exhibit gender-congruence bias&mdash;favoring stereotypical voice-avatar pairings.</p></div></div>
+        <div class="theme-paper-item"><img src="images/10672_CliniCAST_Benchmarking_A.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge acl-f">Findings of ACL 2026</div><h4>Clinical Audio Bias</h4><p>LALMs fail to ground acoustic symptoms (coughing, breathing patterns) in medical triage, over-relying on text content&mdash;a critical "text dominance" failure mode in healthcare AI.</p></div></div>
+        <div class="theme-paper-item"><img src="images/458_Mine_over_Yours_How_Author.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge sigir">SIGIR 2026</div><h4>Mine over Yours: Authorship Bias</h4><p>How authorship biases evaluation in generative IR&mdash;people favor their own generated content.</p></div></div>
+        <div class="theme-paper-item"><img src="images/ACL25_halo.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge acl-f">Findings of ACL 2025</div><h4>Blinded by Context: Halo Effect in AI Hiring</h4><p>Contextual cues create halo effects in MLLM-based hiring, biasing candidate evaluation regardless of qualifications.</p></div></div>
+      </div>
+
+      <div class="theme-connector"><span>Building aligned, fair AI agents leads to the next question: <strong>can we simulate human-like agents at scale</strong> to test these properties&mdash;and what happens when simulation meets HAI?</span></div>
+    </div>
+  </section>
+
+  <!-- Theme 4: Social Simulation -->
+  <section class="section theme-detail" id="theme-simulation">
+    <div class="container">
+      <div class="theme-header" style="border-color: #f0a050">
+        <h2>Social Simulation</h2>
+        <span class="theme-badge" style="background: #f0a050">Current &amp; Future</span>
+      </div>
+      <p class="theme-description">My current postdoc research brings all these threads together. If we can build agents that are aligned, fair, and human-like, we can simulate social systems at scale&mdash;testing policy communication, modeling social polarization, and understanding collective behavior. And when simulation meets HAI, we get AI systems that truly understand people.</p>
+
+      <div class="theme-papers">
+        <div class="theme-paper-item" style="border-left: 4px solid #f0a050; background: #fffaf5">
+          <div style="padding: .5rem">
+            <div class="pub-venue-badge" style="background:#f0a050">Postdoc Project 2025&ndash;2026</div>
+            <h4>Toward Mitigating Social Polarization in Korea</h4>
+            <p>Building social conflict simulation and policy feedback systems using LLM-based agents. Constructing a Korean agent library (200+ agents) and validating polarization representation through debate simulations.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="theme-connector" style="border-left-color: var(--accent)"><span>This is where my research is heading: <strong>human-centered AI systems informed by simulation</strong>, where aligned and fair agents interact with real people to create better social outcomes.</span></div>
+    </div>
+  </section>
+
+  <!-- Foundations (separate, not part of storyline) -->
+  <section class="section theme-detail" id="theme-foundations" style="opacity: 0.8">
+    <div class="container">
+      <div class="theme-header" style="border-color: #aaa">
+        <h2>Foundations</h2>
+        <span class="theme-badge" style="background: #aaa">Earlier work</span>
+      </div>
+      <p class="theme-description">My earlier work in graph neural networks built the technical foundations for my research career, though it follows a separate trajectory from my current HCI and AI alignment focus.</p>
+
+      <div class="theme-papers">
+        <div class="theme-paper-item"><img src="images/978-981-97-5572-1_31.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge other">DASFAA 2024</div><h4>SymphoNEI</h4><p>Combining node and edge inductive representations for learning on large heterophilic graphs.</p></div></div>
+        <div class="theme-paper-item"><img src="images/978-981-97-5572-1_32.pdf.png" alt="" loading="lazy"><div><div class="pub-venue-badge other">DASFAA 2024</div><h4>HopLearn</h4><p>Leveraging multi-hop neighbors and learnable parameters for GNNs with missing node features.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">KYUSIK KIM</span>
+      <span class="footer-copy">&copy; 2026 Kyusik Kim. Artificial Intelligence Institute, Seoul National University.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kyusik Kim — HCI & AI Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,245,243,.92)!important;backdrop-filter:blur(20px)!important}
+    .nav-inner{max-width:1100px;margin:0 auto;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-weight:700;font-size:1rem;color:#1a1a1a!important;text-decoration:none}
+    .nav-links{display:flex;gap:1.5rem}
+    .nav-links a{font-size:.8rem;color:#666!important;font-weight:500;text-decoration:none}
+    .nav-links a:hover{color:#1a1a1a!important}
+    #contact,#contact *{opacity:1!important;transform:none!important}
+    /* Hero layout */
+    .hero-top{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:center}
+    .photo-box{width:280px;height:350px;border-radius:20px;overflow:hidden;position:relative;box-shadow:0 8px 30px rgba(0,0,0,.08)}
+    .profile-img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;transition:opacity 2.5s ease-in-out}
+    /* Responsive */
+    @media(max-width:768px){
+      .nav-links{display:none!important}
+      .hero-top{grid-template-columns:1fr 100px!important;gap:1rem!important;align-items:start}
+      .hero-photo{order:2}
+      .photo-box{width:100px!important;height:125px!important;border-radius:12px!important}
+      .hero-title{font-size:1.6rem!important}
+      .hero-subtitle{font-size:.9rem!important}
+      .hero-actions{flex-direction:column}
+      .hero-actions .btn{text-align:center;justify-content:center}
+      .hero-stats{flex-wrap:wrap;gap:1rem!important}
+      .pub-highlight-grid{grid-template-columns:1fr 1fr!important}
+      .theme-cards{grid-template-columns:1fr 1fr!important}
+      .about-grid{display:block!important}
+      .about-areas{margin-top:2rem}
+      .project-phases{grid-template-columns:1fr!important}
+      .awards-list{padding:0 0.5rem}
+      .footer-inner{flex-direction:column;text-align:center;gap:0.5rem}
+      .contact-links{display:grid!important;grid-template-columns:1fr 1fr!important;gap:.5rem!important;width:100%}
+      .contact-link{justify-content:center;font-size:.8rem!important;padding:.6rem .5rem!important}
+    }
+  </style>
+</head>
+<body data-page="home">
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Kyusik Kim</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="research.html">Research</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="nav-mobile-btn" id="navMobileBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="research.html">Research</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <!-- Title row: text + photo side by side -->
+      <div class="hero-top">
+        <div>
+          <p class="hero-label">/ HCI &amp; AI RESEARCHER</p>
+          <h1 class="hero-title">Building<br><em>Human-Centered</em><br>AI Systems</h1>
+        </div>
+        <div class="hero-photo">
+          <div class="photo-box">
+            <img src="images/photo1.jpg" alt="Kyusik Kim" class="profile-img" style="opacity:1">
+            <img src="images/photo2.jpg" alt="Kyusik Kim" class="profile-img" style="opacity:0">
+          </div>
+        </div>
+      </div>
+      <!-- Description below -->
+      <p class="hero-subtitle">I research <strong>Human-AI Interaction</strong>, designing AI agents that genuinely serve people. My work spans <strong>value alignment</strong>, <strong>fairness</strong>, <strong>societal impacts</strong>, and <strong>social simulation</strong> of AI systems.</p>
+      <p class="hero-subtitle" style="margin-top:0.5rem">Postdoctoral Researcher<br>at Seoul National University AI Institute.</p>
+      <div class="hero-actions">
+        <a href="https://honey-jersey-b77.notion.site/Kyusik-Kim-0b1702c13d6d4602920b53a3c3fc90ab?pvs=74" class="btn btn-primary" target="_blank">Curriculum Vitae</a>
+        <a href="https://scholar.google.co.kr/citations?user=J_Yu1x8AAAAJ&hl=ko" class="btn btn-secondary" target="_blank">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/kyusik-kim-2309892b1/" class="btn btn-secondary" target="_blank">LinkedIn</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><span class="stat-number">4</span><span class="stat-label">CHI</span></div>
+        <div class="stat-item"><span class="stat-number">6</span><span class="stat-label">ACL</span></div>
+        <div class="stat-item"><span class="stat-number">4</span><span class="stat-label">SIGIR</span></div>
+        <div class="stat-item"><span class="stat-number">1</span><span class="stat-label">EMNLP</span></div>
+        <div class="stat-item"><span class="stat-number">17+</span><span class="stat-label">Total</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container">
+      <p class="section-label">/ ABOUT MY RESEARCH</p>
+      <h2 class="section-title">Understanding the Societal <em>Impacts of AI</em></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>My research lies at the intersection of <strong>Human-AI Interaction</strong>, <strong>Value Alignment</strong>, and <strong>Fairness</strong>. I investigate how AI systems affect human decision-making, social dynamics, and cognitive processes&mdash;and how we can design them to be more equitable and aligned with human values.</p>
+          <p>I am particularly interested in understanding biases in multimodal AI systems, designing AI agents that support meaningful human experiences, and building simulation frameworks to study AI's societal effects at scale.</p>
+        </div>
+        <div class="about-areas">
+          <div class="area-item">
+            <div class="area-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="4"/><path d="M16 6h4m-2-2v4"/><path d="M8 14c-4 0-6 2-6 5v1h12v-1c0-3-2-5-6-5z"/><rect x="16" y="14" width="6" height="6" rx="1"/><path d="M18 16h2m-1-1v2"/></svg></div>
+            <div><h4>Human-AI Interaction</h4><p>AI agents, co-viewing, shopping, and collaborative experiences</p></div>
+          </div>
+          <div class="area-item">
+            <div class="area-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v2m0 14v2M3 12h2m14 0h2"/><circle cx="12" cy="12" r="3"/><path d="M6 6l1.5 1.5m9 9L18 18M6 18l1.5-1.5m9-9L18 6"/><path d="M12 1C6 1 1 6 1 12s5 11 11 11 11-5 11-11S18 1 12 1z" stroke-dasharray="3 3" opacity="0.4"/></svg></div>
+            <div><h4>Value Alignment &amp; Fairness</h4><p>Bias in AI hiring, sycophancy, cross-cultural evaluation</p></div>
+          </div>
+          <div class="area-item">
+            <div class="area-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="7" r="3"/><circle cx="12" cy="17" r="3"/><path d="M9.5 8.5L10.5 15"/><path d="M14.5 8.5L13.5 15"/><path d="M10 7h4"/><path d="M3 21h18" stroke-dasharray="2 2" opacity=".5"/></svg></div>
+            <div><h4>Simulation &amp; Benchmarking</h4><p>LLM decision-making, clinical benchmarks, social simulations</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Summary -->
+  <section class="section pub-summary" id="publications">
+    <div class="container">
+      <p class="section-label">/ PUBLICATIONS</p>
+      <h2 class="section-title">Selected <em>Publications</em></h2>
+      <div class="pub-highlight-grid">
+        <a href="publications.html" class="pub-highlight-card">
+          <img src="images/chi26-1637.pdf.png" alt="" loading="lazy">
+          <div class="card-text">
+            <div class="pub-venue-badge chi">CHI 2026</div>
+            <h4>"What Keeps Fans on the Silent Field?"</h4>
+          </div>
+        </a>
+        <a href="publications.html" class="pub-highlight-card">
+          <img src="images/CHI25_Bleacherbot.pdf.png" alt="" loading="lazy">
+          <div class="card-text">
+            <div class="pub-venue-badge chi">CHI 2025</div>
+            <h4>BleacherBot: AI Sports Co-Viewing</h4>
+          </div>
+        </a>
+        <a href="publications.html" class="pub-highlight-card">
+          <img src="images/ACL25_halo.pdf.png" alt="" loading="lazy">
+          <div class="card-text">
+            <div class="pub-venue-badge acl-f">Findings of ACL 2025</div>
+            <h4>Halo Effect in AI Hiring</h4>
+          </div>
+        </a>
+        <a href="publications.html" class="pub-highlight-card">
+          <img src="images/EMNLP24.pdf.png" alt="" loading="lazy">
+          <div class="card-text">
+            <div class="pub-venue-badge emnlp-f">Findings of EMNLP 2024</div>
+            <h4>Will LLMs Sink or Swim?</h4>
+          </div>
+        </a>
+      </div>
+      <a href="publications.html" class="view-all-link">View All 17+ Publications &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Research Themes Summary -->
+  <section class="section research-summary" id="research">
+    <div class="container">
+      <p class="section-label">/ RESEARCH THEMES</p>
+      <h2 class="section-title">Research <em>Trajectory</em></h2>
+      <div class="theme-cards">
+        <div class="theme-card-summary" style="--tc: #3ecf8e">
+          <h4>Human-AI Interaction</h4>
+          <p>AI agents for sports, cinema, shopping, and conversation</p>
+          <span class="theme-count">7 papers</span>
+        </div>
+        <div class="theme-card-summary" style="--tc: #ef6461">
+          <h4>Fairness &amp; Bias</h4>
+          <p>Cross-modal bias, halo effects, cultural asymmetry</p>
+          <span class="theme-count">5 papers</span>
+        </div>
+        <div class="theme-card-summary" style="--tc: #6c63ff">
+          <h4>Value Alignment</h4>
+          <p>Sycophancy, selective exposure, decision-making</p>
+          <span class="theme-count">3 papers</span>
+        </div>
+        <div class="theme-card-summary" style="--tc: #f0a050">
+          <h4>Social Simulation</h4>
+          <p>LLM-based agent simulation, social polarization, policy testing</p>
+          <span class="theme-count">Current &amp; Future</span>
+        </div>
+      </div>
+      <a href="research.html" class="view-all-link">Explore Research Map &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section class="section awards" id="awards">
+    <div class="container">
+      <p class="section-label">/ HONORS &amp; AWARDS</p>
+      <h2 class="section-title">Recognition</h2>
+      <div class="awards-list">
+        <div class="award-item"><span class="award-year">2026</span><div class="award-content"><h4>Outstanding Dissertation Award</h4><p>Graduate School of Convergence Science and Technology, Seoul National University</p></div></div>
+        <div class="award-item"><span class="award-year">2025</span><div class="award-content"><h4>Yulchon AI Young Researcher Scholarship</h4><p>Selected as one of 10 recipients for outstanding "AI + X" interdisciplinary research</p></div></div>
+        <div class="award-item"><span class="award-year">2024</span><div class="award-content"><h4>Google Travel &amp; Conference Grants</h4><p>Student Travel Grants Program for research conference attendance</p></div></div>
+        <div class="award-item"><span class="award-year">2024</span><div class="award-content"><h4>BK-21+ Excellence Award</h4><p>Selected as excellent graduate student in Brain Korea 21 program</p></div></div>
+        <div class="award-item"><span class="award-year">2020&ndash;25</span><div class="award-content"><h4>BK-21+ Scholarship</h4><p>Government scholarship based on publication potential (5 years)</p></div></div>
+      </div>
+      <a href="about.html#awards" class="view-all-link">View Full CV &amp; Awards &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Current Project -->
+  <section class="section project" id="project">
+    <div class="container">
+      <p class="section-label">/ CURRENT RESEARCH PROJECT</p>
+      <h2 class="section-title">Social Conflict Simulation with <em>LLM-Based Agents</em></h2>
+      <div class="project-card">
+        <div class="project-meta">
+          <span class="project-tag">2026 &ndash; 2027</span>
+          <span class="project-tag">SNU AI Institute</span>
+          <span class="project-tag">NRF Global Agenda</span>
+        </div>
+        <h3 class="project-name">Toward Mitigating Social Polarization in Korea</h3>
+        <p class="project-desc">Contributing to a project that builds social conflict simulation and policy feedback systems using LLM-based agents. My work focuses on constructing a Korean agent library (200+ agents reflecting demographics, political orientation, and cultural context) and validating polarization representation through 1:1 and small group debate simulations with quantitative metrics and human evaluation.</p>
+        <div class="project-phases">
+          <div class="phase"><span class="phase-num">01</span><span>Korean Agent Library Construction (200+ agents across 7 data categories)</span></div>
+          <div class="phase"><span class="phase-num">02</span><span>Polarization Representation Validation via Debate Simulations</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact" style="opacity:1!important;transform:none!important;display:block!important;background:#f5f5f3;min-height:300px;padding-bottom:120px">
+    <div class="container">
+      <p class="section-label">/ GET IN TOUCH</p>
+      <h2 class="section-title">Let's Build <em>Responsible AI</em> Together</h2>
+      <p class="contact-text">I'm always open to discussing research collaborations, especially in human-AI interaction, value alignment, and the societal impacts of AI systems.</p>
+      <div class="contact-links" style="display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;width:100%">
+        <a href="mailto:kyu823@snu.ac.kr" class="contact-link" style="flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email</a>
+        <a href="https://scholar.google.co.kr/citations?user=J_Yu1x8AAAAJ&hl=ko" class="contact-link" style="flex-shrink:0" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-2a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM1 8l11-7 11 7v2H1V8z"/></svg> Scholar</a>
+        <a href="https://www.linkedin.com/in/kyusik-kim-2309892b1/" class="contact-link" style="flex-shrink:0" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+        <a href="https://honey-jersey-b77.notion.site/Kyusik-Kim-0b1702c13d6d4602920b53a3c3fc90ab?pvs=74" class="contact-link" style="flex-shrink:0" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> CV</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">KYUSIK KIM</span>
+      <span class="footer-copy">&copy; 2026 Kyusik Kim. Artificial Intelligence Institute, Seoul National University.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Photo crossfade — slow and gentle
+    (function(){
+      var imgs = document.querySelectorAll('.profile-img');
+      if (imgs.length > 1) {
+        var cur = 0;
+        setInterval(function(){
+          imgs[cur].style.opacity = '0';
+          cur = (cur + 1) % imgs.length;
+          imgs[cur].style.opacity = '1';
+        }, 6000);
+      }
+    })();
+  </script>
+</body>
+</html>
