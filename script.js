@@ -197,6 +197,7 @@ if (document.getElementById('storyline-viz')) {
           { short: 'Self-Reference Review', title: 'Self-Referential Review: Self-Reference Effect in Review', venue: 'SIGIR \'24' },
           { short: 'Chatbot Customization', title: 'User-Participated Customization in Chatbot Failure', venue: 'CHI EA \'24' },
           { short: 'LLM Tool-Use', title: 'DICE-BENCH: LLM Tool-Use in Multi-Party Dialogues', venue: 'ACL \'25' },
+          { short: 'Co-Overcooked', title: 'Co-Overcooked: Cognitive Constraints on Partner Modeling in Human-AI Teams', venue: 'CogSci \'26' },
         ]},
       { id: 'alignment', label: 'Value\nAlignment', color: '#6c63ff', orbitAngle: 270,
         edgeLabel: 'What harms must we prevent?',
