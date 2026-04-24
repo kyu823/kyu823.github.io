@@ -8,6 +8,38 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Galaxy visualization */
+    .galaxy-section{padding:40px 2rem 60px;background:#0a0e1a}
+    .galaxy-container{max-width:1100px;margin:0 auto;position:relative}
+    .galaxy-stage{position:relative;width:100%;height:640px;background:radial-gradient(ellipse at center,#141a2e 0%,#0a0e1a 70%,#06080f 100%);border-radius:20px;overflow:hidden;box-shadow:inset 0 0 80px rgba(0,0,0,.6)}
+    .galaxy-stage svg{width:100%;height:100%;display:block}
+    .galaxy-stage.focused svg .theme-node:not(.active){opacity:.18;transition:opacity .5s}
+    .galaxy-stage.focused svg .theme-arrow{opacity:.1;transition:opacity .5s}
+    .galaxy-stage.focused svg .arrow-label{opacity:0;transition:opacity .3s}
+    .galaxy-back{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.08);color:#e0e6f0;border:1px solid rgba(255,255,255,.15);padding:8px 14px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;display:none;backdrop-filter:blur(10px);z-index:10;transition:background .2s}
+    .galaxy-back:hover{background:rgba(255,255,255,.15)}
+    .galaxy-back.show{display:block}
+    .galaxy-hint{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);color:#5a6a8a;font-size:11px;font-weight:500;letter-spacing:.05em;pointer-events:none;transition:opacity .3s}
+    .galaxy-hint.hide{opacity:0}
+    .galaxy-panel{position:absolute;top:0;right:0;width:380px;height:100%;background:linear-gradient(180deg,#1a2138 0%,#0f1424 100%);border-left:1px solid rgba(255,255,255,.08);transform:translateX(100%);transition:transform .4s cubic-bezier(.2,.9,.3,1);z-index:20;display:flex;flex-direction:column;color:#e0e6f0}
+    .galaxy-panel.open{transform:translateX(0)}
+    .galaxy-panel-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.08);border:none;width:30px;height:30px;border-radius:8px;cursor:pointer;color:#e0e6f0;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center;transition:background .2s}
+    .galaxy-panel-close:hover{background:rgba(255,255,255,.18)}
+    .galaxy-panel-accent{height:4px;width:100%}
+    .galaxy-panel-body{padding:32px 28px 28px;overflow-y:auto;flex:1}
+    .galaxy-panel-venue{display:inline-block;padding:5px 12px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.06em;color:#fff;text-transform:uppercase;margin-bottom:14px}
+    .galaxy-panel-title{font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;line-height:1.25;letter-spacing:-.01em;margin:0 0 16px;color:#fff}
+    .galaxy-panel-authors{font-size:12px;color:#9aabc7;line-height:1.6;margin:0 0 16px;font-style:italic}
+    .galaxy-panel-abstract{font-size:14px;line-height:1.7;color:#c4d2e8;margin:0 0 24px}
+    .galaxy-panel-link{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:rgba(62,207,142,.12);color:#3ecf8e;border:1px solid rgba(62,207,142,.3);border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;transition:all .2s}
+    .galaxy-panel-link:hover{background:rgba(62,207,142,.2);border-color:#3ecf8e}
+    .galaxy-panel-meta{font-size:11px;color:#6b7a96;margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08)}
+    @media(max-width:768px){
+      .galaxy-stage{height:480px}
+      .galaxy-panel{width:100%}
+    }
+  </style>
 </head>
 <body data-page="research">
 
@@ -39,10 +71,18 @@
     </div>
   </section>
 
-  <!-- Interactive Storyline Visualization -->
-  <section class="section storyline-viz-section">
-    <div class="container">
-      <div id="storyline-viz" class="storyline-viz"></div>
+  <!-- Interactive Galaxy Visualization -->
+  <section class="galaxy-section">
+    <div class="galaxy-container">
+      <div class="galaxy-stage" id="galaxy-stage">
+        <button class="galaxy-back" id="galaxy-back">← Back to galaxy</button>
+        <div class="galaxy-hint" id="galaxy-hint">Click a sun to explore</div>
+        <div class="galaxy-panel" id="galaxy-panel">
+          <button class="galaxy-panel-close" id="galaxy-panel-close">×</button>
+          <div class="galaxy-panel-accent" id="galaxy-panel-accent"></div>
+          <div class="galaxy-panel-body" id="galaxy-panel-body"></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -196,5 +236,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="research-galaxy.js"></script>
 </body>
 </html>
